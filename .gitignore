@@ -1,0 +1,21 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.venv/
+venv/
+env/
+*.env  # Optional: Ignore environment files if they contain sensitive information
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Pytest
+.pytest_cache/
+
+# Database files
+*.db
+*.sqlite3
+

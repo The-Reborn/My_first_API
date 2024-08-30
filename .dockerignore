@@ -1,0 +1,20 @@
+# .dockerignore
+
+# Ignore Python bytecode files
+__pycache__
+*.pyc
+*.pyo
+
+# Ignore virtual environment
+venv/
+
+# Ignore Docker files
+Dockerfile*
+docker-compose.yml
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore .env to protect sensitive information
+#.env
