@@ -1,4 +1,4 @@
-Yahoo Finance Extractor API
+# Yahoo Finance Extractor API
 Overview
 
 The Yahoo Finance Extractor API is a FastAPI application that provides endpoints to interact with Yahoo Finance data. This application is containerized using Docker and includes automated tests to ensure its functionality.
