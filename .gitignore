@@ -6,7 +6,7 @@ __pycache__/
 .venv/
 venv/
 env/
-*.env  # Optional: Ignore environment files if they contain sensitive information
+*.env  
 
 # IDEs and Editors
 .vscode/
