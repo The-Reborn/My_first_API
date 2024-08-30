@@ -94,7 +94,7 @@ $ docker rmi <image_id_web> && <image_id_test>
 
 6. Run Automated Tests
 
-The docker compose automatically perfoms the tests when it is run.
+The docker compose automatically perfoms the tests when it is initiating.
 To manually run the automated tests, execute the following command:
 
 bash
