@@ -17,6 +17,7 @@ def create_tables():
     Create all tables defined in the models by calling Base.metadata.create_all.
     This function will create the tables in the database if they do not already exist.
     """
+    print("Creating tables...")
     Base.metadata.create_all(bind=engine)
 
 # Create a sessionmaker instance that will be used to create new SQLAlchemy sessions.

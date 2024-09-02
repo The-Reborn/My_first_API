@@ -3,7 +3,8 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from app.middleware.logging import LoggingMiddleware  # Import custom logging middleware
-from app.database import create_tables  # Import function to create database tables
+from app.models import Base
+from app.database import engine, create_tables  # Import function to create database tables
 from app.routes import instrument, purchase, sale, transaction, portfolio  # Import routers for different routes
 from app.config.otel_config import configure_tracing  # Import OpenTelemetry configuration
 
@@ -16,16 +17,22 @@ configure_tracing(app)
 # Add custom logging middleware to the FastAPI app
 app.add_middleware(LoggingMiddleware)
 
-@asynccontextmanager
-async def startup_event():
-    """
-    Async context manager for handling startup events.
+#@asynccontextmanager
+#@app.on_event("startup")
+#async def startup_event():
+
+# async def lifespan(app: FastAPI):
+#     """
+#     Async context manager for handling startup events.
     
-    This function creates the database tables when the application starts.
-    """
-    create_tables()
-    yield
-    # Any teardown logic would go here (not needed in this case)
+#     This function creates the database tables when the application starts.
+#     """
+#     create_tables()
+#     yield
+#     # Any teardown logic would go here (not needed in this case)
+
+create_tables()
+
 
 @app.get("/")
 def read_root():
